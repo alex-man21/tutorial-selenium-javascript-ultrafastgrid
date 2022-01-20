@@ -11,7 +11,7 @@ describe('DemoApp - Ultrafast Grid', function () {
 
     // Create a new chrome web driver
     const options = new chrome.Options();
-    if (process.env.CI === 'true') options.headless();
+    options.headless();
 
     driver = await new Builder()
         .forBrowser('chrome')
